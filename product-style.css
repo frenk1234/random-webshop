@@ -1,0 +1,122 @@
+/* Fonts */
+
+/* General styling */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  border: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Header styling */
+
+nav {
+  background: black;
+  display: flex;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: gopher, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 40px;
+  padding: 20px;
+}
+
+nav a:first-child {
+  margin-right: auto;
+}
+
+nav a {
+  transition: all 0.3s 0.1s;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 2rem;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+/* Main styling */
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+  list-style-type: none;
+  display: flex;
+}
+
+.breadcrumbs ol {
+  list-style-type: none;
+}
+.breadcrumbs li::after {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 10px;
+  content: "";
+  transition: all 0.3s;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9 14"><path fill="none" stroke="white" d="M.8 12.87l7.5-6-7.5-6"></path></svg>');
+  background-repeat: no-repeat;
+  /* url('data:image/svg+xml;utf8,<svg class="svg-arrowRight" viewBox="0 0 9 14"><path fill="none" stroke="#979797" d="M.8 12.87l7.5-6-7.5-6"></path></svg>'); */
+}
+.breadcrumbs li:last-child::after {
+  background: none;
+}
+
+.breadcrumbs li {
+  list-style-type: none;
+  text-transform: uppercase;
+  border-right: solid 0.5px black;
+  padding-left: 5px;
+}
+
+.breadcrumbs li a {
+  text-decoration: none;
+}
+
+/* Product view */
+
+.product-view {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+.product-img {
+  grid-column: 2/3;
+}
+
+.product-img {
+  display: block;
+  border-radius: 8;
+  padding: 1rem;
+}
+
+.product-info {
+  grid-column: 3/4;
+  padding: 1rem;
+}
+
+.brand-info {
+  grid-column: 2/4;
+  padding-top: 4rem;
+}
+
+.product-discounted p {
+  color: red;
+  line-height: 1rem;
+}
+
+/* Footer styling */
